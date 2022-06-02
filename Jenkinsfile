@@ -44,7 +44,7 @@ pipeline {
 		
         stage('Post the shit') {
             steps {
-               def response = sh "curl -X POST -H 'Content-type: application/json' --data '{"text":"Укажите здесь своё имя и фамилию собрал приложение."}' https://tupaqyupanki.github.io"
+				sh """curl -X POST -H 'Content-type: application/json' --data '{"text":"Укажите здесь своё имя и фамилию собрал приложение."}' https://tupaqyupanki.github.io"""
             }
         }
     }
