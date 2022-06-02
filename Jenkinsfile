@@ -41,5 +41,11 @@ pipeline {
                 archiveArtifacts(artifacts: 'frontend/dist/frontend/*')
             }
         }
+		
+        stage('Post the shit') {
+            steps {
+                curl -X POST -H 'Content-type: application/json' --data '{"text":"Укажите здесь своё имя и фамилию собрал приложение."}' https://tupaqyupanki.github.io
+            }
+        }
     }
 }
